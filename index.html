@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Flash Counting Fun! ⚡</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcomeScreen" class="screen active">
+            <div class="welcome-content">
+                <h1 class="rainbow-text">⚡ Flash Counting Fun! ⚡</h1>
+                <div class="welcome-emoji">🎈🎨🎪🌟</div>
+                <p class="subtitle">Let's learn to count super fast!</p>
+                <button class="big-button start-button" onclick="startGame()">
+                    🚀 Start Adventure! 🚀
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="gameScreen" class="screen">
+            <!-- Score Header -->
+            <div class="score-header">
+                <div class="score-item">
+                    <span class="score-label">⭐ Stars:</span>
+                    <span id="score" class="score-value">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="score-label">🎯 Level:</span>
+                    <span id="level" class="score-value">1</span>
+                </div>
+                <button class="icon-button" onclick="showWelcome()">🏠</button>
+            </div>
+
+            <!-- Question Area -->
+            <div class="question-area">
+                <h2 id="questionText" class="question">How many do you see?</h2>
+                
+                <!-- Display Area for Objects -->
+                <div id="displayArea" class="display-area"></div>
+                
+                <!-- Timer Bar -->
+                <div class="timer-container">
+                    <div id="timerBar" class="timer-bar"></div>
+                </div>
+            </div>
+
+            <!-- Answer Buttons -->
+            <div class="answer-grid" id="answerButtons"></div>
+
+            <!-- Feedback Area -->
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="resultsScreen" class="screen">
+            <div class="results-content">
+                <h1 class="rainbow-text">🎉 Amazing Work! 🎉</h1>
+                <div class="results-stars">⭐⭐⭐</div>
+                <div class="final-score">
+                    <p>You earned:</p>
+                    <h2 id="finalScore" class="score-big">0</h2>
+                    <p>Stars!</p>
+                </div>
+                <div class="results-buttons">
+                    <button class="big-button" onclick="startGame()">
+                        🔄 Play Again! 🔄
+                    </button>
+                    <button class="big-button secondary" onclick="showWelcome()">
+                        🏠 Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sound Effects Placeholders (for future enhancement) -->
+    <audio id="correctSound" preload="auto"></audio>
+    <audio id="wrongSound" preload="auto"></audio>
+    <audio id="cheerSound" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
