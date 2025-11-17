@@ -225,8 +225,11 @@ function checkAnswer(selectedAnswer, button) {
     const feedback = document.getElementById('feedback');
     const buttons = document.querySelectorAll('.answer-button');
     
-    // Disable all buttons
-    buttons.forEach(btn => btn.disabled = true);
+    // Remove any existing classes and disable all buttons
+    buttons.forEach(btn => {
+        btn.classList.remove('correct', 'wrong');
+        btn.disabled = true;
+    });
     
     if (selectedAnswer === gameState.currentQuestion.answer) {
         // Correct answer

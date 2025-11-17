@@ -333,6 +333,10 @@ body::after {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 .answer-button:hover {
@@ -343,6 +347,11 @@ body::after {
 
 .answer-button:active {
     transform: translateY(-2px) scale(1.02);
+}
+
+.answer-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .answer-button.correct {
