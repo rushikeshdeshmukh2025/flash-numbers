@@ -425,7 +425,128 @@ body::after {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+
+/* Tablets - Portrait (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .rainbow-text {
+        font-size: 2.5em;
+    }
+    
+    .welcome-emoji {
+        font-size: 3.5em;
+    }
+    
+    .subtitle {
+        font-size: 1.4em;
+    }
+    
+    .big-button {
+        font-size: 1.4em;
+        padding: 18px 45px;
+    }
+    
+    .question {
+        font-size: 1.8em;
+    }
+    
+    .frame-box {
+        width: 65px;
+        height: 65px;
+        font-size: 2.3em;
+    }
+    
+    .answer-button {
+        font-size: 1.7em;
+        padding: 25px;
+    }
+    
+    .screen {
+        padding: 35px;
+    }
+    
+    .display-area {
+        gap: 30px;
+        padding: 30px;
+    }
+    
+    .frame-container {
+        padding: 9px;
+    }
+    
+    .answer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Phones - Landscape (481px - 768px, landscape) */
+@media (max-width: 768px) and (min-width: 481px) and (orientation: landscape) {
+    .container {
+        width: 98%;
+    }
+    
+    .rainbow-text {
+        font-size: 1.8em;
+    }
+    
+    .welcome-emoji {
+        font-size: 2.8em;
+    }
+    
+    .subtitle {
+        font-size: 1.1em;
+    }
+    
+    .big-button {
+        font-size: 1.1em;
+        padding: 12px 30px;
+    }
+    
+    .question {
+        font-size: 1.4em;
+    }
+    
+    .frame-box {
+        width: 48px;
+        height: 48px;
+        font-size: 1.7em;
+    }
+    
+    .answer-button {
+        font-size: 1.4em;
+        padding: 18px;
+    }
+    
+    .screen {
+        padding: 20px;
+    }
+    
+    .display-area {
+        gap: 18px;
+        padding: 18px;
+        min-height: 150px;
+    }
+    
+    .frame-container {
+        padding: 6px;
+    }
+    
+    .answer-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+    
+    .score-header {
+        padding: 10px;
+    }
+    
+    .score-item {
+        font-size: 1.1em;
+    }
+}
+
+/* Phones - Portrait (481px - 768px) */
+@media (max-width: 768px) and (min-width: 481px) and (orientation: portrait) {
     .rainbow-text {
         font-size: 2em;
     }
@@ -448,9 +569,9 @@ body::after {
     }
     
     .frame-box {
-        width: 55px;
-        height: 55px;
-        font-size: 2em;
+        width: 58px;
+        height: 58px;
+        font-size: 2.1em;
     }
     
     .answer-button {
@@ -464,28 +585,200 @@ body::after {
     
     .display-area {
         gap: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .rainbow-text {
-        font-size: 1.5em;
-    }
-    
-    .frame-box {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5em;
+        padding: 20px;
     }
     
     .frame-container {
         padding: 8px;
     }
     
-    .display-area {
-        min-height: 200px;
-        gap: 20px;
+    .answer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Small Phones (max 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .container {
+        width: 98%;
+    }
+    
+    .rainbow-text {
+        font-size: 1.5em;
+    }
+    
+    .welcome-emoji {
+        font-size: 2.5em;
+    }
+    
+    .subtitle {
+        font-size: 1em;
+    }
+    
+    .big-button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+    
+    .question {
+        font-size: 1.2em;
+    }
+    
+    .frame-box {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1em;
+        border-right: 1px solid #ccc;
+    }
+    
+    .frame-box.separator-after {
+        border-right: 3px solid #333;
+    }
+    
+    .answer-button {
+        font-size: 1.3em;
         padding: 15px;
+    }
+    
+    .screen {
+        padding: 15px;
+        border-radius: 20px;
+    }
+    
+    .display-area {
+        min-height: 100px;
+        gap: 15px;
+        padding: 15px 10px;
+        border-width: 3px;
+    }
+    
+    .frame-container {
+        padding: 5px;
+        border-width: 2px;
+    }
+    
+    .score-header {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .score-item {
+        font-size: 1.1em;
+    }
+    
+    .answer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .feedback {
+        font-size: 2em;
+        min-height: 50px;
+    }
+}
+
+/* Extra Small Phones (max 360px) */
+@media (max-width: 360px) {
+    .frame-box {
+        width: 26px;
+        height: 26px;
+        font-size: 1em;
+    }
+    
+    .display-area {
+        padding: 10px 8px;
+        gap: 12px;
+    }
+    
+    .frame-container {
+        padding: 4px;
+    }
+    
+    .answer-button {
+        font-size: 1.2em;
+        padding: 12px 10px;
+    }
+    
+    .big-button {
+        font-size: 0.95em;
+        padding: 10px 20px;
+    }
+    
+    .rainbow-text {
+        font-size: 1.3em;
+    }
+}
+
+/* Large tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .frame-box {
+        width: 65px;
+        height: 65px;
+        font-size: 2.3em;
+    }
+    
+    .container {
+        max-width: 850px;
+    }
+    
+    .display-area {
+        gap: 35px;
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1025px) {
+    .frame-box {
+        width: 75px;
+        height: 75px;
+        font-size: 2.8em;
+    }
+    
+    .container {
+        max-width: 1000px;
+    }
+    
+    .display-area {
+        gap: 45px;
+    }
+}
+
+/* Landscape orientation for phones */
+@media (max-width: 768px) and (orientation: landscape) {
+    .display-area {
+        min-height: 100px;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .frame-box {
+        width: 38px;
+        height: 38px;
+        font-size: 1.5em;
+    }
+    
+    .frame-container {
+        padding: 5px;
+    }
+    
+    .screen {
+        padding: 15px;
+    }
+    
+    .question {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .answer-grid {
+        gap: 10px;
     }
 }
 
