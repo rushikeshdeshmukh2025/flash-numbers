@@ -82,6 +82,10 @@ function generateQuestion() {
     clearInterval(gameState.timerInterval);
     document.getElementById('feedback').textContent = '';
     
+    // Clear any previous button states
+    const answerButtons = document.getElementById('answerButtons');
+    answerButtons.innerHTML = '';
+    
     // Determine difficulty based on level
     let maxNumber;
     if (gameState.level === 1) {
@@ -179,6 +183,7 @@ function generateAnswerOptions(correctAnswer, maxNumber) {
         const button = document.createElement('button');
         button.className = 'answer-button';
         button.textContent = option;
+        button.disabled = false;
         button.onclick = () => checkAnswer(option, button);
         answerButtons.appendChild(button);
     });
